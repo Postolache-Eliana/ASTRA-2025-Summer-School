@@ -44,7 +44,8 @@ matplotlib, numpy for visualization and preprocessing
 
 Custom logic for blink artifact detection and signal streaming
 
-🎯 Future Work
+🎯 Future Work:
+
 Improve real-time signal processing for more complex artifacts
 
 Explore classification using more brain states and signals
