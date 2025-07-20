@@ -1,0 +1,22 @@
+const int blueLED1 = 10;
+const int blueLED2 = 7;
+
+void setup() {
+  pinMode(blueLED1, OUTPUT);
+  pinMode(blueLED2, OUTPUT);
+  Serial.begin(9600);  // Deschidem comunicarea serială
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    char command = Serial.read();
+
+    if (command == 'C') {  // 'C' = Clipit detectat
+      digitalWrite(blueLED1, HIGH);
+      digitalWrite(blueLED2, HIGH);
+      delay(20);  // LED-urile rămân aprinse pentru 200ms
+      digitalWrite(blueLED1, LOW);
+      digitalWrite(blueLED2, LOW);
+    }
+  }
+}
